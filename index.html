@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenho uma pergunta 💖</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<!-- BOTÃO DE MÚSICA -->
+<button id="btn-musica" onclick="toggleMusica()">🎵 Pausar</button>
+
+<div class="container">
+
+  <div id="inicio">
+    <h1>Ei…</h1>
+    <p>Antes de tudo, seu neguinho quer te mostrar algo...</p>
+    <button onclick="iniciar()">Iniciar 💕</button>
+  </div>
+
+  <div id="conteudo" class="hidden">
+
+    <!-- CARROSSEL -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- SLIDE 1 -->
+        <div class="swiper-slide">
+          <img src="foto1.jpg">
+          <p class="frase">Você é o motivo do meu sorriso torto.</p>
+          <div class="coracoes"></div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="swiper-slide">
+          <img src="foto2.jpg">
+          <p class="frase">Desde que eu te vi, tudo faz sentido.</p>
+          <div class="coracoes"></div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="swiper-slide">
+          <img src="foto3.jpg">
+          <p class="frase">Você é a parte mais linda de mim, não é amor, é bem melhor.</p>
+          <div class="coracoes"></div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="swiper-slide">
+          <img src="foto4.jpg">
+          <p class="frase">Eu quero ser leal, enquanto nosso lance for real.</p>
+          <div class="coracoes"></div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="swiper-slide">
+          <img src="foto5.jpg">
+          <p class="frase">Andava perdido e sozinho no mundo e do nada voce chegou!</p>
+          <div class="coracoes"></div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- ESPAÇO PARA VÍDEO -->
+    <div class="video-box">
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+
+    <!-- PEDIDO -->
+    <h3 class="pedido">Quer namorar comigo? 💖</h3>
+
+    <div class="botoes">
+      <button class="sim" onclick="aceitou()">Sim 😍</button>
+      <button class="nao" onmouseover="fugir()" onclick="fugir()">Não 🙄</button>
+    </div>
+
+    <p id="final"></p>
+  </div>
+
+</div>
+<!-- TIMELINE -->
+<section id="timeline" class="hidden">
+  <div class="timeline">
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos1.jpg">
+    <p>27/07/2025 — O dia que nos conhecemos</p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos2.jpg">
+    <p>07/09/2025 — Nossa primeira viagem pra ilha juntos</p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos3.jpg">
+    <p>14/09/2025 — o dia que fomos a casa de padin</p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos4.jpg">
+    <p>28/09/2025 — Quando curtimos o show de Amsterda juntos, dia incrivel</p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos5.jpg">
+    <p>12/10/2025 — O dia que fomos a praia da penha</p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos6.jpg">
+    <p>27/10/2025 — Quando fomos a praia da preguiça (quando escolhi o lugar não tinha ideia de como seria tão especial)</p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos7.jpg">
+    <p>31/12/2025 — sou apaixonado nesse sorriso (ainda vou imprimir essa foto e guardar comigo) </p>
+  </div>
+
+  <div class="item">
+    <span class="dot"></span>
+    <img src="img/fotos8.jpg">
+    <p>31/12/2025 — Nosso primeiro ano novo juntos.</p>
+  </div>
+
+</div>
+<!-- TEXTO FINAL DO CARROSSEL -->
+<div class="final-carrossel">
+  <p id="textoFinalCarrossel">Desde o dia em que te conheci e me comparou com os quadros pintados do mercado modelo, percebi que voce era muito especial (autista) e a cada dia eu vou me apaixonando por você gradativamente. Encontros, fotos, memorias, abraços, sorrisos, conversas dificeis, sempre me fazem acreditar que com você minha vida se torna mais facil, já te dei inumeros apelidos, dentre eles meu Ebáno, Paçoquita, Doce de leite, a verdade é que eu não tenho palavras pra descrever qual a magnitude do meu amor por você, Eu te amo. Te amo pelo cara que você me faz ser, te amo pelo seu empenho e sua vontade em me ver bem, te amo por ser minha calma em meio ao caos da minha mente. Seu Neguinho fez esse site pra te mostrar o quanto você é especial pra ele, e que nada nem ninguem te faça acreditar que o que sinto por você não é real.</p>
+</div>
+
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
